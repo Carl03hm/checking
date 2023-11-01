@@ -1,0 +1,135 @@
+/* body */
+* {
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    background: var(--bgm);
+    scroll-behavior: smooth;
+}
+/* delete scrollbar*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+}
+/* colors */
+:root {
+    --red: red;
+    --white: white;
+    --black: black;
+    --gray: gray;
+    --yellow: yellow;
+    --blue: blue;
+    --bgm: rgb(26, 24, 24);
+}
+
+/******Links******/
+.link {
+    display: flex;
+    border: 2px solid var(--red);
+    position: fixed;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    width:1362px;
+}
+ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 10px;
+}
+li {
+    margin-right: 50px;
+}
+a {
+    text-decoration: none;
+    color: var(--white)
+}
+/******Phone Menu******/
+.phone-btn {
+    text-align: center;
+    display: none;
+    color: var(--white);
+    font-size: 30px;
+    margin-left: 200px;
+    margin-top: -9px;
+    position: fixed;
+}
+.phone-menu {
+    display: none;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 500px;
+    background: var(--blue);
+    
+}
+.ul-phone {
+    display: grid;
+}
+
+/******Container******/
+.container {
+    display: grid;
+    flex: wrap;
+
+}
+.home-page, .about-page, .contact-page, .projects-page {
+    flex: 1;
+}
+
+
+
+/******Home Page******/
+.home-page {
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--red);
+    padding-bottom: 720px;
+}
+/******About Page******/
+.about-page {
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--blue);
+    padding-bottom: 720px;
+}
+/******Contact Page******/
+.contact-page {
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--yellow);
+    padding-bottom: 720px;
+}
+/******Project Page******/
+.projects-page {
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--white);
+    padding-bottom: 720px;
+}
+
+
+/* Media query for screen size*/
+
+@media (max-width: 768px) {
+    .link {
+        width: 95%;
+    }
+    .menu {
+        display: none;
+    }
+    .phone-btn {
+        display: block;
+    }
+    
+}
+@media (max-width: 1024px) {
+    .link {
+        width: 100%;
+    }
+}
